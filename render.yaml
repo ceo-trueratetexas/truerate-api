@@ -1,3 +1,15 @@
+services:
+  - type: web
+    name: truerate-texas-gpt4
+    env: python
+    buildCommand: "pip install -r requirements_full.txt"
+    startCommand: "python app_openai_gpt4.py"
+    plan: free
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: MODEL_NAME
+        value: gpt-4
 
 services:
   - type: web
@@ -12,9 +24,6 @@ services:
         sync: false
       - key: MODEL_NAME
         value: mistralai/Mistral-7B-Instruct-v0.1
-
-
-
 
 services:
   - type: web
