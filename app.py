@@ -15,6 +15,10 @@ app = Flask(__name__)
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, token=HF_TOKEN)
 model = AutoModelForCausalLM.from_pretrained(MODEL_NAME, token=HF_TOKEN, device_map="auto")
 
+@app.route("/")
+def home():
+    return "TrueRate Texas API is running"
+
 @app.route("/generate", methods=["POST"])
 def generate():
     try:
