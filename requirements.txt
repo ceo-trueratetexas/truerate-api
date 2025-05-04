@@ -1,5 +1,9 @@
-
-flask
+Flask
+gunicorn
+pymongo
+stripe
 transformers
 torch
 accelerate
+safetensors
+flask-cors
