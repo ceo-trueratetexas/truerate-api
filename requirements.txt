@@ -14,3 +14,4 @@ PyPDF2
 fpdf
 dnspython
 pandas
+openai
